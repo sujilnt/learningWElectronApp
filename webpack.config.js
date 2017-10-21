@@ -87,6 +87,9 @@ module.exports = ({ platform, prod } = {}) => {
       new webpack.DefinePlugin({
         "process.env.NODE_ENV": JSON.stringify(prod ? "production" : "development")
       }),
+      new webpack.ProvidePlugin({
+            Promise: "imports-loader?this=>global!exports-loader?global.Promise!bluebird"
+      }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.optimize.CommonsChunkPlugin({
         names: ["vendor", "manifest"],

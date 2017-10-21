@@ -102,6 +102,9 @@
     "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
+    "exports-loader": "^0.6.4",
+    "imports-loader": "^0.7.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
